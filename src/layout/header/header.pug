@@ -1,0 +1,47 @@
+- const menu = ['Home', 'About', 'Portfolio', 'Services', 'Page', 'Elements'];
+-
+  const megaMenu = [
+    {
+      title: 'Elements 1',
+      list: ['Client', 'Progress Bar', 'Header', 'Footer', 'Accordions', 'Pricing'],
+    },
+    {
+      title: 'Elements 2',
+      list: ['Contact Forms', 'Counters', 'Icon box', 'Subscribe Newsletter', 'Action button', 'Video Section'],
+    },
+    {
+      title: 'Elements 3',
+      list: ['Creative_Shape', 'Blog box', 'Testimonial', 'Services', 'About us', 'Faq'],
+    },
+    {
+      title: 'Elements 4',
+      list: ['404', 'Coming Soon Page', 'Button', 'Typography', 'Team', 'Structure'],
+    },
+  ];
+
+header.header
+  .header__menu
+    .logo.header__logo
+      img(src="/images/share/logo.png", alt="logo").logo__image
+    nav.header__nav
+      ul.header__nav-list
+        each item in menu
+          li.header__nav-item
+            a(href="#").header__nav-link= item
+            .header__tooltip-menu
+              .header__mega-menu
+                each list in megaMenu
+                  .header__mega-submenu
+                    h5.header__mega-menu-title= list.title
+                    ul.header__mega-menu-list
+                      each item in list.list
+                        li.header__mega-menu-item
+                          a(href="#").header__mega-menu-link= item
+    button.header__contacts-btn
+      a(href="#").header__contacts-link Contact us
+    .header__burger
+  .header__decor1
+  .header__decor2
+
+
+

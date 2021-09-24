@@ -1,0 +1,56 @@
+-
+  const services = [
+    {
+      avatar: "av-marketing.png",
+      title: "Content Marketing",
+      text: "We craft great content that keep your users interested and coming back for more. I have mixed feelings about the explosion of web content."
+    },
+    {
+      avatar: "av-building.png",
+      title: "Link Building",
+      text: "Links are still a powerful ranking factor in SEO. However, acquiring the wrong links could lead to a Google Penalty."
+    },
+    {
+      avatar: "av-social.png",
+      title: "SEO & Social media",
+      text: "Your data tells a story that we need to understand. We’ve built a proprietary report that pulls important SEO data from Google Search Console"
+    },
+    {
+      avatar: "av-ppc.png",
+      title: "AdWords & PPC",
+      text: "Is your Google AdWords budget disappearing without sales or calls? Or are you new to pay per click advertising, PPC?"
+    },
+  ];
+
+.services
+  .container-inner
+    .services__header
+      .services__titles
+        span.services__suptitle We’re Offering
+        h2.services__title SEO Services with talent specialist & Digital business
+      button.services__btn
+        a(href="#").services__link See More Services
+    .services__content
+      .services__card-container
+        .card.services__card-marketing
+          .card__avatar
+            img(src=`/images/share/${services[0].avatar}`).card__img
+          h3.card__title= services[0].title
+          p.card__text= services[0].text
+      .services__card-container
+        .card.services__card-building
+          .card__avatar
+            img(src=`/images/share/${services[1].avatar}`).card__img
+          h3.card__title= services[1].title
+          p.card__text= services[1].text
+        .card.services__card-social
+          .card__avatar
+            img(src=`/images/share/${services[2].avatar}`).card__img
+          h3.card__title= services[2].title
+          p.card__text= services[2].text
+      .services__card-container
+        .card.services__card-ppc
+          .card__avatar
+            img(src=`/images/share/${services[services.length - 1].avatar}`).card__img
+          h3.card__title= services[3].title
+          p.card__text= services[3].text

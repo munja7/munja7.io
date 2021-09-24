@@ -1,0 +1,160 @@
+.header
+  background-color: rgba(	25,	21,	43, 0.7)
+  height: 628px
+  padding: 3% 6% 0 4%
+  position: relative
+
+  &__menu
+    display: flex
+    align-items: center
+
+  &__logo
+    margin-right: 15%
+    flex-shrink: 0
+
+  &__nav
+    @include max-w(1100)
+      display: none
+
+  &__nav-list
+    display: flex
+    font-size: 20px
+    line-height: 36px
+    margin: 0 -15px
+
+  &__nav-item
+    padding: 0 15px
+    position: relative
+
+  &__nav-link
+    color: #fff
+
+    &:hover + .header__tooltip-menu
+      visibility: visible
+      opacity: 1
+
+    &:hover
+      border-bottom: 2px solid #ff3b69
+
+  &__contacts-btn
+    width: 178px
+    height: 60px
+    border-radius: 30px
+    background-color: #ff3b69
+    margin-left: auto
+    margin-right: 30px
+    border: none
+
+  &__contacts-link
+    color: #fff
+    display: flex
+    height: 100%
+    text-align: center
+    font-size: 20px
+    align-items: center
+    justify-content: center
+
+  &__burger
+    background: url("/images/share/Grid.svg") 0 0 no-repeat;
+    width: 35px
+    height: 20px
+
+  &__tooltip-menu
+    display: inline-block
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    left: 0
+    top: 55px
+    transition: all .25s ease-out
+    z-index: 1
+
+    &:hover
+      visibility: visible
+      opacity: 1
+
+    &::before
+      content: ""
+      position: absolute
+      display: block
+      width: 13px
+      height: 13px
+      background-color: #fff
+      left: 2%
+      top: -5px
+      transform: rotate(45deg)
+
+    &::after
+      content: ""
+      display: inline-block
+      position: absolute
+      width: 100%
+      height: 20px
+      top: -20px
+
+  &__mega-menu
+    background-color: #fff
+    display: flex
+    box-shadow: 0 18px 38px rgba(205, 198, 198, 0.35)
+    border-radius: 10px
+    padding: 45px 50px 60px 40px
+    margin: 0 -75px
+
+  &__mega-submenu
+    min-width: 150px
+    position: relative
+
+    &:last-child
+      .header__mega-menu-list
+        margin-right: 0px
+
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      width: 100%
+      height: 1px
+      border-bottom: 1px solid #efefef
+      top: 45px
+
+  &__mega-menu-title
+    padding-left: 30px
+    font-size: 20px
+    line-height: 36px
+    margin-bottom: 26px
+    display: inline-block
+
+  &__mega-menu-list
+    padding-left: 30px
+    margin-right: 80px
+
+  &__mega-menu-item
+    font-size: 16px
+    line-height: 36px
+    white-space: nowrap
+
+  &__mega-menu-link
+    opacity: 0.8
+    color: $color-text-base
+
+  &__decor1,
+    position: absolute
+    background: url("/images/share/Ellipse_16.png") no-repeat
+    width: 20px
+    height: 20px
+    bottom: 90px
+    left: 169px
+
+  &__decor2
+    position: absolute
+    background: url("/images/share/Rectangle.png") no-repeat
+    width: 180px
+    height: 180px
+    bottom: 75px
+    right: 200px
+
+
+
+
+
+

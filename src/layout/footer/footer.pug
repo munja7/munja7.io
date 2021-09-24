@@ -1,0 +1,60 @@
+-
+  const footerMenu = [
+    {
+      title: "Company",
+      list: ['About', 'Contact', 'Home', 'Insights', 'Services & Clients', 'Work']
+    },
+    {
+      title: "Solution",
+      list: ['Digital maeketing', 'Phototype', 'Development', 'Design', 'Business Strategy', 'Agency protfolio']
+    },
+  ];
+
+footer.footer
+  .container-inner.footer__container
+    .footer__company-info
+      .footer__logo.logo
+        img(src="/images/share/Text_bg_footer.png" alt="logo").logo__image
+      .footer__company-info
+        span.footer__address 75 Arlington St. Suite 500 Boston, MA 02116, USA
+        a(href="#" onClick="func()").footer__phone +088 01912704287
+        a(href="#").footer__email infooffice@gmail.com
+      .footer__socials
+        a(href="#").footer__social-link
+          i.fab.fa-facebook-f.footer__socials-img
+        a(href="#").footer__social-link
+          i.fab.fa-instagram.footer__socials-img
+        a(href="#").footer__social-link
+          i.fas.fa-basketball-ball.footer__socials-img
+        a(href="#").footer__social-link
+          i.fab.fa-twitter.footer__socials-img
+    each item in footerMenu
+      .footer__company-list
+          h3.footer__list-title= item.title
+          ul.footer__list
+            each link in item.list
+              li.footer__list-item
+                a(href="#").footer__list-link= link
+    .footer__bottom-wrapper
+      .footer__copyrights Copyrights 2019 Template_mr Template
+      .footer__apps
+        span.footer__apps-text Mobile Apps :
+        a(href="#").footer__apps-link
+          i.fab.fa-apple.footer__apps-icon
+        a(href="#").footer__apps-link
+          i.fab.fa-google-play.footer__apps-icon
+      ul.footer__other-links
+        li.footer__other-links-item
+          a(href="#").footer__other-link Privacy Policy
+        li.footer__other-links-item
+          a(href="#").footer__other-link  Customer Support
+        li.footer__other-links-item
+          a(href="#").footer__other-link  Careers
+  .footer__decor1
+  .footer__decor2
+
+
+
+
+
+
