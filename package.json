@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "frontend boilerplate",
   "private": true,
+  "homepage": "https://munja7.github.io/munja7.io/",
   "scripts": {
     "start": "npm run hot",
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --open --progress --hot",
@@ -11,7 +12,9 @@
     "dev": "npm run development",
     "prod": "npm run production",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress"
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@babel/cli": "^7.13.16",

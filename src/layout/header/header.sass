@@ -3,6 +3,7 @@
   height: 628px
   padding: 3% 6% 0 4%
   position: relative
+  overflow: hidden
 
   &__menu
     display: flex
@@ -12,8 +13,11 @@
     margin-right: 15%
     flex-shrink: 0
 
+    @include max-w(1650)
+      margin-right: auto
+
   &__nav
-    @include max-w(1100)
+    @include max-w(950)
       display: none
 
   &__nav-list
@@ -45,6 +49,9 @@
     margin-right: 30px
     border: none
 
+    @include max-w(900)
+      width: 140px
+
   &__contacts-link
     color: #fff
     display: flex
@@ -69,6 +76,9 @@
     transition: all .25s ease-out
     z-index: 1
 
+    @include max-w(1650)
+      width: 200px
+
     &:hover
       visibility: visible
       opacity: 1
@@ -80,7 +90,7 @@
       width: 13px
       height: 13px
       background-color: #fff
-      left: 2%
+      left: 4%
       top: -5px
       transform: rotate(45deg)
 
@@ -100,9 +110,16 @@
     padding: 45px 50px 60px 40px
     margin: 0 -75px
 
+    @include max-w(1650)
+      padding: 10px 20px 20px 20px
+      flex-wrap: wrap
+
   &__mega-submenu
     min-width: 150px
     position: relative
+
+    @include max-w(1650)
+      max-width: 150px
 
     &:last-child
       .header__mega-menu-list
@@ -124,6 +141,11 @@
     margin-bottom: 26px
     display: inline-block
 
+    @include max-w(1650)
+      margin-top: 20px
+      font-size: 16px
+      line-height: 20px
+
   &__mega-menu-list
     padding-left: 30px
     margin-right: 80px
@@ -132,6 +154,10 @@
     font-size: 16px
     line-height: 36px
     white-space: nowrap
+
+    @include max-w(1650)
+      font-size: 14px
+      line-height: 20px
 
   &__mega-menu-link
     opacity: 0.8
